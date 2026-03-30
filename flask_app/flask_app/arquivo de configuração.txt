@@ -1,0 +1,15 @@
+Abrir o vscode e executar o código abaixo.
+
+pip install flask flask-mysql mysql-connector-python
+
+No MySQL Workbench executar o código abaixo.
+Antes verifique se existe o Banco de dados Aula.
+
+ use aula;
+
+CREATE TABLE usuario (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    status ENUM('ativo', 'inativo') DEFAULT 'ativo'
+);

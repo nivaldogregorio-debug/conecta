@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .course-info {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2, h3 {
+            color: #007BFF;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Painel de Controle</h1>
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#about-course">Sobre o Curso</a>
+        <a href="{{ url_for('logout') }}">Sair</a>
+    </nav>
+
+    <main>
+        <h2>Bem-vindo, {{ usuario }}!</h2>
+        <section id="about-course">
+            <div class="course-info">
+                <h3>Sobre o Curso de Desenvolvimento de Sistemas</h3>
+                <p>O curso de <strong>Desenvolvimento de Sistemas</strong> é projetado para fornecer as habilidades essenciais para criar e gerenciar sistemas de software complexos. Ao longo do curso, você aprenderá as melhores práticas de programação, arquitetura de software, desenvolvimento de aplicativos e integração de sistemas.</p>
+
+                <h4>Conteúdo do Curso</h4>
+                <ul>
+                    <li><strong>Fundamentos de Programação:</strong> Aprenda linguagens como Python, Java e JavaScript.</li>
+                    <li><strong>Desenvolvimento de Front-End:</strong> Criação de interfaces interativas com HTML, CSS e JavaScript.</li>
+                    <li><strong>Desenvolvimento de Back-End:</strong> Trabalhe com servidores, bancos de dados e APIs usando frameworks como Flask, Django, Node.js.</li>
+                    <li><strong>Arquitetura de Software:</strong> Entenda os padrões e técnicas para criar sistemas escaláveis e eficientes.</li>
+                    <li><strong>Metodologias Ágeis:</strong> Aplicação de Scrum e Kanban no desenvolvimento de software.</li>
+                    <li><strong>Desenvolvimento Mobile:</strong> Criação de aplicativos para plataformas iOS e Android.</li>
+                </ul>
+
+                <h4>Objetivo do Curso</h4>
+                <p>Capacitar os alunos para que possam desenvolver sistemas completos, desde a ideia inicial até a implementação final. O objetivo é formar profissionais capazes de atuar em diferentes áreas do desenvolvimento de software.</p>
+
+                <h4>Certificação</h4>
+                <p>Ao concluir o curso, os alunos receberão um certificado reconhecido no mercado, demonstrando suas habilidades e competências adquiridas durante o curso.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
+
