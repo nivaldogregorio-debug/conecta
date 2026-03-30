@@ -9,7 +9,7 @@ app.secret_key = 'chave_secreta_segura'
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="ufabc",
+    password="amaral",
     database="aula"
 )
 cursor = db.cursor(dictionary=True)
